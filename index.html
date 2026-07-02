@@ -272,7 +272,7 @@ body {
 
 var G_IVA = 0.19;
 var G_NAC = 0.0299;
-var G_INT = 0.03;
+var G_INT = 0.0344;
 var G_LINK = 250 * (1 + 0.19);
 var G_EMAIL = "ao.cl@nomadgenetics.com,beatriz.fonseca@nomadgenetics.com";
 var gTab = "ws";
@@ -288,7 +288,7 @@ function gCalc() {
   var iva = neto * G_IVA;
   var conIva = neto + iva;
   var tasa = tc === "nacional" ? G_NAC : G_INT;
-  var tasaPct = tc === "nacional" ? "2,99%" : "3,00%";
+  var tasaPct = tc === "nacional" ? "2,99%" : "3,44%";
   var comision = conIva * tasa;
   var total = conIva + comision + G_LINK;
   gData = { neto: neto, iva: iva, conIva: conIva, comision: comision, total: total, tasaPct: tasaPct, nombre: nombre, tc: tc };
